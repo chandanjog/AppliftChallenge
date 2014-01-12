@@ -1,5 +1,7 @@
+<div class="page-header">
+  <h1>All Gadgets</h1>
+</div>
+
 <% @gadgets.each do |gadget| %>
-    <div class="well">
-      <%= gadget.to_json %>
-    </div>
+    <%= render :partial => 'gadget', :locals => { :gadget => gadget } %>
 <% end %>

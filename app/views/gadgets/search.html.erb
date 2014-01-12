@@ -1,12 +1,7 @@
+<div class="page-header">
+  <h1>Searched Gadgets</h1>
+</div>
+
 <% @gadgets.each do |gadget| %>
-    <div class="well">
-      <div class="row" >
-        <div class="col-xs-6 col-md-3">
-          <%= image_tag gadget.pictures.first.attachment.url(:small) %>
-          <div>
-            <%= gadget.to_json %>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render :partial => 'gadget', :locals => { :gadget => gadget } %>
 <% end %>
