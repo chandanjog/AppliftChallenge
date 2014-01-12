@@ -22,6 +22,8 @@ Steps to run the code:
 * bundle exec rspec
 * rake db:seed - this would seed the db with some gadgets with images for a user with email foo@bar.com and password: password.
 * rake rake db:mongoid:remove_indexes and rake db:mongoid:create_indexes can be used to recreate the full-text-search indexes.
+* Once the site is up you can search by "samsung lorem" to get back results, while search by "apple" would not return any results. Currently the search has been
+setup on the manufacturer and description fields for a gadget.
 
 
 
