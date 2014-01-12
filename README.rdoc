@@ -1,28 +1,26 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My Decsions:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Used mongodb to store gadget's information as there is no fixed schema for it.
+* Used devise for the user creation and login along with mongodb.
+* In the interest of time decided to go with the in-build mongodb-search for doing a full-text search instead of using something like elasticsearch/solr.
+* Twitter bootstrap for basic styling.
+* I took more time than the stipulated 3 hrs because of a couple of issues. Spent quite some time figuring out why my spec for full_text_search using mongodb_search wasn't executing as expected while the same worked from the console.
+  Still could not figure it out and market the spec to be looked at later. I was stuck getting the integration with paperclip on my dev box working. Had a silly mistake in the way
+  i had setup my seeds, using new instead of create. Still the images would not render on the screen though the model seemed to have the right urls. Tried debugging for permission issues, but later figured out it was to do the specific pattern on the url
+  parameter on the picture model. Spent a lot of time debugging it, had to take a break to refresh my thoughts.
+* Wanted to use a carousel to render the multiple images for a gadget on the view along with a pretty-json display for gadget details, but did not spend time implementing it as i had already ran over time.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Steps to run the code:
+
+* Install mongodb and start the server.
+* gem install bundler
+* bundle install
+* bundle exec rspec
+* rake db:seed - this would seed the db with some gadgets with images for a user with email foo@bar.com and password: password.
+* rake rake db:mongoid:remove_indexes and rake db:mongoid:create_indexes can be used to recreate the full-text-search indexes.
+
+
+
