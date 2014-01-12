@@ -22,13 +22,14 @@ gem 'jbuilder', '~> 1.2'
 gem 'bson_ext'
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 gem "devise"
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-group :test do
+group :development, :test do
   gem 'rspec-rails'
   gem 'database_cleaner'
 end
