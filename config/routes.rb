@@ -4,4 +4,10 @@ AppliftChallenge::Application.routes.draw do
 
   root 'gadgets#index'
 
+  resources :gadgets, :only => [:index] do
+    collection do
+      get 'search' => 'gadgets#search'
+    end
+  end
+
 end
