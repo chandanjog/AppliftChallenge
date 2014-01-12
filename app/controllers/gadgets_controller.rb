@@ -4,4 +4,9 @@ class GadgetsController < ApplicationController
   def index
     @gadgets = Gadget.all
   end
+
+  def search
+    @gadgets = Gadget.full_text_search(params[:query])
+  end
+
 end
