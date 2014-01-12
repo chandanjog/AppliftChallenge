@@ -2,6 +2,7 @@
 
 My Decsions:
 
+* Have used rvm to set the ruby version to 2 and a gemset for the project.
 * Used mongodb to store gadget's information as there is no fixed schema for it.
 * Used devise for the user creation and login along with mongodb.
 * In the interest of time decided to go with the in-build mongodb-search for doing a full-text search instead of using something like elasticsearch/solr.
