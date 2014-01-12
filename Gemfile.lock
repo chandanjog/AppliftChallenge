@@ -65,6 +65,7 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
+    fast-stemmer (1.0.2)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -81,6 +82,9 @@ GEM
     minitest (4.7.5)
     mongoid-paperclip (0.0.8)
       paperclip (>= 2.3.6)
+    mongoid_search (0.3.2)
+      fast-stemmer (~> 1.0.0)
+      mongoid (>= 3.0.0)
     moped (2.0.0.beta5)
       bson (~> 2.1)
       connection_pool (~> 1.2)
@@ -171,6 +175,7 @@ DEPENDENCIES
   jquery-rails
   mongoid!
   mongoid-paperclip
+  mongoid_search
   rails (= 4.0.2)
   rspec-rails
   sass-rails (~> 4.0.0)

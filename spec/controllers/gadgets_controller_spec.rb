@@ -14,5 +14,6 @@ describe GadgetsController do
     assigns[:gadgets].should_not be_nil
   end
 
+
 end
 

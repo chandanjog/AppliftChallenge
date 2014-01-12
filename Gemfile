@@ -23,6 +23,7 @@ gem 'bson_ext'
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 gem "devise"
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'mongoid_search'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
