@@ -1,1 +1,5 @@
-hello
+<%= @gadgets.each do |gadget| %>
+    <div>
+      <%= gadget.to_json %>
+    <div>
+<%end%>

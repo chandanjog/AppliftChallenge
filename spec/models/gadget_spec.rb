@@ -16,7 +16,7 @@ describe Gadget do
     Gadget.where(:id => "XX1").first.should_not be_nil
   end
 
-  it 'can have many pictures(integration spec)' do
+  it 'can have many pictures' do
     s2_pic = Picture.new(:attachment => File.new(Rails.root+'app/assets/images/s2.png'))
     s2_180_degree_pic = Picture.new(:attachment => File.new(Rails.root+'app/assets/images/s2.png'))
     Gadget.create(:id => "XX1", :name => "S2", :manufacturer => 'samsung', :pictures => [s2_pic, s2_180_degree_pic], :user => @user)
