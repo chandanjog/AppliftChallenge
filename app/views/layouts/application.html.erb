@@ -2,13 +2,30 @@
 <html>
 <head>
   <title>AppliftChallenge</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar navbar-default">
 
-<%= yield %>
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Gadgets</a>
+  </div>
 
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+    </li>
+  </ul>
+
+</div>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>
