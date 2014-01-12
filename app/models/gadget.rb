@@ -11,7 +11,7 @@ class Gadget
   field :manufacturer
   field :info, :type => Hash
 
-  search_in :manufacturer, :info => [:manufacturer, :description]
+  search_in :manufacturer, :description, :info => [:manufacturer, :description]
 
   validates_presence_of :user
 end

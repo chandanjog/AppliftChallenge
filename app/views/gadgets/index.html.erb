@@ -1,5 +1,5 @@
-<%= @gadgets.each do |gadget| %>
-    <div>
+<% @gadgets.each do |gadget| %>
+    <div class="well">
       <%= gadget.to_json %>
-    <div>
-<%end%>
+    </div>
+<% end %>
